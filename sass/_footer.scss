@@ -1,0 +1,33 @@
+@import "navbar";
+@import "variables";
+@import "media-queries";
+@import "showcase";
+
+footer {
+background-color: $lima;
+height: 200px;
+width: 100%;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+
+.copy{
+    font-size: 30px;
+    font-weight: bold;
+    color: $oscuro;
+    @include celular {
+        font-size: 20px;
+    }
+}
+
+.sociales a{
+    font-size: 32px;
+    margin: 0px 15px;
+    color: $oscuro;
+    @include celular {
+        font-size: 20px;
+    }
+}
+
+}

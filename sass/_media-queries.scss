@@ -8,7 +8,7 @@
 }
 
 @mixin celular {
-    @media screen and (max-width: 280px) {
+    @media screen and (max-width: 480px) {
         @content;
     }
 }
