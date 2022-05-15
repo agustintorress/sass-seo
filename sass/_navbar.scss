@@ -1,0 +1,78 @@
+@import "variables";
+@import "media-queries";
+
+%align-center {
+    align-items: center;
+}
+
+.navbar {
+    background-color: $claro;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    padding: 8px calc((100vw - 1200px) /2);
+    z-index: 10;
+    position: relative;
+
+    &__logo {
+        color: $oscuro;
+        cursor: pointer;
+        text-decoration: none;
+        font-size: 32px;
+        margin-left: 24px;
+        margin-top: 12px;
+        @extend %align-center;
+    }
+
+    &__barra {
+        opacity: 0;
+
+        @include tablet {
+            color: $oscuro;
+            opacity: 1;
+            position: absolute;
+            top: 22px;
+            right: 20px;
+            font-size: 32px;
+        }
+    }
+
+    &__menu {
+        @extend %align-center;
+        list-style: none;
+        text-align: center;
+        margin-right: 24px;
+        margin-top: 20px;
+
+        @include tablet {
+            display: none;
+        }
+        
+        &--links {
+            color: $oscuro;
+            @extend %align-center;
+            justify-content: center;
+            text-decoration: none;
+            padding: 0px 16px;
+
+            &:hover {
+                color: $lima;
+                transition: all 0.3s ease;
+            }
+        }
+        #boton {
+            padding: 12px 24px;
+            border: none;
+            outline: none;
+            border-radius: 4px;
+            background: $lima;
+            color: $claro;
+            margin-left: 16px;
+
+            &:hover {
+                background: $rojo;
+                transition: all 0.3s;
+            }
+        }
+    }
+}

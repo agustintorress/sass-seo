@@ -1,0 +1,100 @@
+@import "navbar";
+@import "variables";
+@import "media-queries";
+
+.showcase {
+    background-color: $claro;
+
+    &__container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        justify-items: center;
+        margin: 0 auto;
+        height: 90vh;
+        z-index: 1;
+        width: 100%;
+        max-width: 1200px;
+        padding: 0 24px;
+
+        @include tablet {
+            grid-template-columns: 1fr;
+            height: 100%;
+        }
+
+        &--izquierda {
+            width: 100%;
+            line-height: 1.2;
+
+            @include tablet {
+                padding: 5rem 0;
+            }
+
+            @include celular {
+                line-height: 1.5;
+            }
+        }
+
+        &--izquierda h1 {
+            font-size: 4rem;
+            color: $lima;
+
+            @include celular {
+                font-size: 1.5rem;
+            }
+        }
+
+        &--izquierda h2 {
+            font-size: 4rem;
+            color: $oscuro;
+
+            @include celular {
+                font-size: 2rem;
+            }
+        }
+
+        &--izquierda p {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-top: 16px;
+            color: $oscuro;
+
+            @include celular {
+                font-size: 1.5rem;
+            }
+        }
+
+        &--btn {
+            font-size: 16px;
+            background-color: $lima;
+            padding: 14px 32px;
+            margin-top: 1rem;
+            border: none;
+            border-radius: 4px;
+            color: $claro;
+            cursor: pointer;
+            position: absolute;
+            outline: none;
+        }
+
+        &--btn a {
+            z-index: 2;
+            color: $claro;
+            text-decoration: none;
+        }
+        
+        &--btn:hover {
+            background: $rojo;
+            transition: all 0.3s;
+        }
+
+        &--derecha {
+            text-align: center;
+        }
+
+        &--img {
+            height: 100%;
+            width: 100%;
+        }
+    }
+}
